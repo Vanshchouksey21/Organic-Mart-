@@ -10,15 +10,15 @@ const AuthModal = ({ onClose }) => {
   };
 
   const handleLogin = (loginData) => {
-    // Implement login logic
+    
     console.log('Login Data:', loginData);
-    // Add authentication API call here
+  
   };
 
   const handleSignup = (signupData) => {
-    // Implement signup logic
+  
     console.log('Signup Data:', signupData);
-    // Add signup API call here
+   
   };
 
   return (

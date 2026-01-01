@@ -16,7 +16,7 @@ import { Link, useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const Product = () => {
+const Product = ({onLoaded}) => {
   const [products, setProducts] = useState([]);
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.mycart.cart);
@@ -30,13 +30,17 @@ const Product = () => {
   }, []);
 
   useEffect(() => {
-    fetch("https://e-commerce-json-data-ommh.onrender.com/products")
+    fetch("https://organic-mart-json-data.onrender.com/products")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
         setProducts(data);
       })
-      .catch((error) => console.error("Error fetching products:", error));
+      .catch((error) => console.error("Error fetching products:", error))
+        .finally(() => {
+      //
+      onLoaded();
+    });
   }, []);
 
   const handleAddToCart = (product) => {

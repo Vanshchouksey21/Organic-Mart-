@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Img1 from "../assets/crousalImg/img_1.png";
 import Img2 from "../assets/crousalImg/img_2.png";
 import Img3 from "../assets/crousalImg/img_3.png";
 import Img4 from "../assets/crousalImg/img_4.png";
 import Img5 from "../assets/crousalImg/img_5.png";
-
+import Spinner from "react-bootstrap/Spinner";
 import Product from "../components/Product";
 import Banner from "../components/Banner";
 import CertificationLogos from "../components/CertificationLogos";
@@ -13,6 +13,9 @@ import TestimonialsSection from "../components/TestimonialsSection";
 import ProductFAQs from "../components/ProductFAQs";
 
 const Home = () => {
+   const [loading, setLoading] = useState(true);
+   console.log(loading);
+   
   return (
     <>
       <div className="carousel-container mt-10">
@@ -78,7 +81,14 @@ const Home = () => {
       
       {/* Your other components would go here */}
       <Banner />
-      <Product />
+      {loading && (
+        <div className="text-center my-5">
+          <Spinner animation="border" variant="success" />
+          <p className="mt-2">Loading products...</p>
+        </div>
+      )}
+
+      <Product onLoaded={() => setLoading(false)} />
       <CertificationLogos />
       <TestimonialsSection />
       <ProductFAQs />

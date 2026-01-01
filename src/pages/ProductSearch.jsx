@@ -31,7 +31,7 @@ const ProductSearch = () => {
   }, []);
 
   useEffect(() => {
-    fetch("https://e-commerce-json-data-ommh.onrender.com/products")
+    fetch("https://organic-mart-json-data.onrender.com/products")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

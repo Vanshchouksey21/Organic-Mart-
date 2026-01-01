@@ -19,7 +19,7 @@ const ProductDisplay = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const api = `https://e-commerce-json-data-ommh.onrender.com/products/${id}`;
+        const api = `https://organic-mart-json-data.onrender.com/products/${id}`;
         const response = await axios.get(api);
         setProduct(response.data);
       } catch (error) {

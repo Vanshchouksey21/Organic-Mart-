@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 
 const Footer = () => {
@@ -15,7 +15,7 @@ const Footer = () => {
             </p>
           </Col>
 
-          {/* Quick Links */}
+          
           <Col md={2}>
             <h5 className="fw-bold">Quick Links</h5>
             <ul className="list-unstyled">
@@ -59,10 +59,10 @@ const Footer = () => {
           </Col>
           <Col md={6}>
             <h5 className="fw-bold">Follow Us</h5>
-            <a href="https://facebook.com" className="text-light me-3 text-decoration-none">Facebook</a>
-            <a href="https://instagram.com" className="text-light me-3 text-decoration-none">Instagram</a>
-            <a href="https://twitter.com" className="text-light me-3 text-decoration-none">Twitter</a>
-            <a href="https://youtube.com" className="text-light text-decoration-none">YouTube</a>
+            <a href="#" className="text-light me-3 text-decoration-none">Facebook</a>
+            <a href="#" className="text-light me-3 text-decoration-none">Instagram</a>
+            <a href="#" className="text-light me-3 text-decoration-none">Twitter</a>
+            <a href="#" className="text-light text-decoration-none">YouTube</a>
           </Col>
         </Row>
       </Container>
